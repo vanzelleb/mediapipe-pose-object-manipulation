@@ -1,0 +1,15 @@
+{
+  "name": "mediapipe-pose-and-aframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "path": "0.12.7",
+    "express": "4.17.1"
+  },
+  "keywords": []
+}

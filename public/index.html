@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.4/pose.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      video {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: scale(-1, 1);
+        z-index: -1;
+      }
+
+      canvas {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      #coordinates {
+        color: black;
+        font-size: 20pt;
+        text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div id="coordinates">
+        <div>
+          Left: (x: {{ round(left3D.x) }}m, y: {{ round(left3D.y) }}m, z: {{
+          round(left3D.z) }}m)
+        </div>
+        <div>
+          Right: (x: {{ round(right3D.x) }}m, y: {{ round(right3D.y) }}m, z: {{
+          round(right3D.z) }}m)
+        </div>
+      </div>
+      <canvas id="output"></canvas>
+      <video id="video"></video>
+      <a-scene>
+        <a-camera position="0 1.6 0"></a-camera>
+        <!--<a-gltf-model
+          id="left"
+          position="0 1 -3"
+          src="https://cdn.jsdelivr.net/gh/siouxcitizen/3DModel@a1c2e47550ca20de421f6d779229f66efab07830/yuusha.gltf"
+        ></a-gltf-model>-->
+        <a-sphere
+          id="left"
+          position="0 1 -3"
+          radius="0.5"
+          color="blue"
+        ></a-sphere>
+        <a-sphere
+          id="right"
+          position="0 1 -3"
+          radius="0.5"
+          color="yellow"
+        ></a-sphere>
+      </a-scene>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
