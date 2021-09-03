@@ -1,6 +1,6 @@
 ## Moving objects in 3D space through body pose tracking
 
-The objective of this experiment was to verify if I could move objects in 3D space by tracking my body pose through the webcam and run the whole thing in a browser. Maybe it can serve as a starting point for more ambitious projects.
+The objective of this experiment was to verify if I could move objects in 3D space by tracking my body pose through a webcam and run the whole thing in a browser. Maybe it serves as a starting point for more ambitious projects.
 
 ![Juggling balls](public/balls2.jpg)
 
@@ -11,4 +11,4 @@ While the 2D positions match the location of your wrists in the video input, the
 
 The pose tracking works best if at least your upper body is fully visible in the video.
 
-You can try it out [here](https://sjvd9.sse.codesandbox.io/)
+**You can try it out [here](https://sjvd9.sse.codesandbox.io/)**
